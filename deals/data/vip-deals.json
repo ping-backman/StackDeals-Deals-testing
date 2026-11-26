@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T23:07:35Z",
+  "updated_at": "2026-11-26T23:47:50Z",
   "total": 18,
   "deals": [
     {
@@ -420,7 +420,7 @@
       "created_at": 1795734376,
       "admin_debug": {
         "source_url": "https://9to5toys.com/2026/11/26/thanksgiving-deals-hub-best-now-live/",
-        "extraction_status": "success_direct_found",
+        "extraction_status": "success_redirect_followed",
         "raw_price_text": "Now:220.0 Was:449.99",
         "has_direct_amazon_link": true,
         "resolved_url": "https://www.amazon.com/dp/B0FWCXJVHN?tag=toysj-20&amp;th=1"
