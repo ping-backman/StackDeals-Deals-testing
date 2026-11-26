@@ -1,0 +1,29 @@
+{
+  "updated_at": "2026-11-26T08:00:00Z",
+  "total": 1,
+  "instructions": "VIP-exclusive high-discount & promo-code deals unlocked at 5 qualified referrals + 1 completed task.",
+  "deals": [
+    {
+      "id": "sd-vip001",
+      "manual_override": false,
+      "is_vip": true,
+      "source": "DealNews Editors Choice",
+      "category": "Tech & Electronics",
+      "badge": "68% OFF + CODE",
+      "discount_pct": 68,
+      "quality_score": 115,
+      "title": "Active Noise Cancelling Wireless Over-Ear Headphones (60H Playtime)",
+      "retail_price": 79.99,
+      "deal_price": 25.59,
+      "promo_code": "VIPSOUND50",
+      "affiliate_url": "https://www.amazon.com/dp/B0EXAMPLE99",
+      "raw_url": "https://www.amazon.com/dp/B0EXAMPLE99",
+      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-vip001",
+      "fb_caption": "🔥 68% OFF + CODE: Active Noise Cancelling Wireless Over-Ear Headphones\n💰 Now $25.59 (Reg. $79.99)\n🎟️ Promo Code: VIPSOUND50\n👇 Grab the direct link in the first comment!",
+      "fb_comment_link": "👉 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-vip001",
+      "image_url": "",
+      "seed_likes": 88,
+      "created_at": 1795680000
+    }
+  ]
+}
