@@ -1,5 +1,5 @@
 (() => {
-  const DEALS_API = "https://deals-api.getstackdeals.xyz";
+  const DEALS_API = "api2.getstackdeals.xyz";
   const PUBLIC_FALLBACK_JSON = "data/public-deals.json";
 
   let publicDeals = [];
