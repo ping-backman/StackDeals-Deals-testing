@@ -8,8 +8,9 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
-# 8 Verified Active US Deal XML RSS Feeds
 RSS_SOURCES = [
+    # Note: Slickdeals and DealNews are heavily protected. 
+    # We keep them, but the script will now strictly filter out their failures.
     {"name": "Slickdeals Frontpage", "url": "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&searchin=first&rss=1", "priority": 10},
     {"name": "Slickdeals Popular Deals", "url": "https://slickdeals.net/newsearch.php?mode=popdeals&searcharea=deals&searchin=first&rss=1", "priority": 9},
     {"name": "DealNews Most Popular", "url": "https://www.dealnews.com/f14/Most-Popular/?rss=1", "priority": 9},
@@ -24,7 +25,6 @@ SKIMLINKS_SITE_ID = os.getenv("SKIMLINKS_SITE_ID", "").strip()
 AMAZON_TAG = os.getenv("AMAZON_TAG", "").strip()
 DEALS_DOMAIN = os.getenv("DEALS_DOMAIN", "https://deals.getstackdeals.xyz").rstrip("/")
 
-# Configurable caps: Set GitHub Secret PUBLIC_CAP=9999 to remove limits when quality is verified
 PUBLIC_CAP = int(os.getenv("PUBLIC_CAP", "60")) if os.getenv("PUBLIC_CAP", "60").lower() != "unlimited" else 9999
 VIP_CAP = int(os.getenv("VIP_CAP", "18")) if os.getenv("VIP_CAP", "18").lower() != "unlimited" else 9999
 RETENTION_SECONDS = 48 * 3600
@@ -37,8 +37,7 @@ HEADERS = {
 }
 
 def wrap_monetized_url(raw_url: str, deal_id: str) -> str:
-    if not raw_url:
-        return ""
+    if not raw_url: return ""
     parsed = urllib.parse.urlparse(raw_url)
     clean_url = raw_url
 
@@ -63,35 +62,23 @@ def extract_direct_amazon_url(html_text: str) -> str:
     return ""
 
 def resolve_amazon_from_source(source_url: str) -> tuple[str, str]:
-    """Fetches the source deal page, follows redirects (like Slickdeals click.html), and extracts Amazon URL."""
     extraction_status = "failed"
-    final_url = source_url
     try:
         req = urllib.request.Request(source_url, headers=HEADERS)
-        # urllib.request.urlopen automatically follows HTTP 301/302 redirects
         with urllib.request.urlopen(req, timeout=15) as resp:
             html = resp.read().decode('utf-8', errors='ignore')
-            final_url = resp.geturl() # Get the final URL after any redirects
             
         amazon_url = extract_direct_amazon_url(html)
         if amazon_url:
-            extraction_status = "success_redirect_followed" if final_url != source_url else "success_direct_found"
+            extraction_status = "success_redirect_followed"
             return amazon_url, extraction_status
-            
-        # If no Amazon link, but it redirected, note it
-        if final_url != source_url:
-            extraction_status = "redirect_followed_no_amazon"
-            
-    except Exception as e:
-        extraction_status = f"fetch_error: {str(e)[:50]}"
+    except Exception:
+        pass # Silently fail, the quality gate will catch this
     return "", extraction_status
 
 def extract_promo_code(text: str) -> str:
-    patterns = [
-        r'(?:promo\s*code|coupon\s*code|use\s*code|with\s*code|code)[:\s]+["\']?([A-Z0-9]{4,16})["\']?',
-        r'["\']([A-Z0-9]{4,16})["\']\s+(?:at\s+checkout|to\s+save|for\s+discount)',
-    ]
-    stopwords = {"AMAZON", "PRIME", "FREE", "SHIPPING", "COUPON", "OFFER", "DEALS", "SAVE", "CART", "PAGE", "CLICK", "HERE", "HTTP", "WWW"}
+    patterns = [r'(?:promo\s*code|coupon\s*code|use\s*code|with\s*code|code)[:\s]+["\']?([A-Z0-9]{4,16})["\']?']
+    stopwords = {"AMAZON", "PRIME", "FREE", "SHIPPING", "COUPON", "OFFER", "DEALS", "SAVE", "CART", "PAGE", "CLICK", "HERE"}
     for pat in patterns:
         m = re.search(pat, text or "", re.I)
         if m:
@@ -104,65 +91,45 @@ def extract_prices(title: str, desc: str) -> tuple[float, float, str]:
     combined = f"{title} {re.sub(r'<[^>]+>', ' ', desc or '')}"
     raw_price_text = ""
     
-    # Look for explicit patterns first
     now_match = re.search(r'(?:now|price|for|only)\s+\$([0-9]{1,4}(?:\.[0-9]{2})?)', combined, re.I)
     was_match = re.search(r'(?:was|list|regular|retail|originally)[^\$]*\$([0-9]{1,4}(?:\.[0-9]{2})?)', combined, re.I)
     
-    deal_price = None
-    retail_price = None
+    deal_price = float(now_match.group(1)) if now_match else None
+    retail_price = float(was_match.group(1)) if was_match else None
+    raw_price_text = f"Now:{deal_price} Was:{retail_price}" if (deal_price or retail_price) else "Heuristic search"
     
-    if now_match:
-        deal_price = float(now_match.group(1))
-        raw_price_text += f"Now:{deal_price} "
-    if was_match:
-        retail_price = float(was_match.group(1))
-        raw_price_text += f"Was:{retail_price}"
-        
-    # Fallback heuristic
     if not deal_price or not retail_price:
         raw_prices = re.findall(r'\$([0-9]{1,4}(?:\.[0-9]{2})?)', combined)
         nums = sorted(set(float(p) for p in raw_prices if 0.5 <= float(p) <= 2500.0))
         if nums:
-            if not deal_price:
-                deal_price = nums[0]
+            if not deal_price: deal_price = nums[0]
             if not retail_price and len(nums) > 1 and nums[-1] > deal_price * 1.15:
                 retail_price = nums[-1]
-            raw_price_text += f"Heuristic:{nums}"
+            raw_price_text += f" {nums}"
             
     return deal_price, retail_price, raw_price_text.strip()
 
 def extract_image(item_elem, desc_html: str) -> str:
-    blocked_domains = ["pixel", "tracking", "facebook", "twitter", "google-analytics", "doubleclick", "slickdeals.net/cdn"]
-    
-    # 1. Check media namespace tags (common in Slickdeals/WordPress)
+    blocked = ["pixel", "tracking", "facebook", "twitter", "google-analytics", "doubleclick", "slickdeals.net/cdn"]
     for child in item_elem:
-        tag_lower = child.tag.lower()
-        if "content" in tag_lower or "thumbnail" in tag_lower:
+        if "content" in child.tag.lower() or "thumbnail" in child.tag.lower():
             url = child.attrib.get("url", "")
-            if url.startswith("http") and not url.endswith(".gif") and not any(b in url.lower() for b in blocked_domains):
+            if url.startswith("http") and not url.endswith(".gif") and not any(b in url.lower() for b in blocked):
                 return url
-
-    # 2. Check description HTML
     img_match = re.search(r'<img[^>]+src=["\'](https?://[^"\']+)["\']', desc_html or "", re.I)
     if img_match:
         url = img_match.group(1)
-        if not url.endswith(".gif") and not any(b in url.lower() for b in blocked_domains):
+        if not url.endswith(".gif") and not any(b in url.lower() for b in blocked):
             return url
-            
     return ""
 
 def categorize_deal(title: str) -> str:
     t = title.lower()
-    if any(k in t for k in ["ssd", "laptop", "headphone", "earbud", "usb", "charger", "monitor", "tv", "anker", "apple", "galaxy", "tablet", "speaker", "camera"]):
-        return "Tech & Electronics"
-    if any(k in t for k in ["kitchen", "pan", "air fryer", "coffee", "vacuum", "tumbler", "towel", "bed", "sheet", "pillow", "blender", "organizer"]):
-        return "Home & Kitchen"
-    if any(k in t for k in ["drill", "tool", "dewalt", "milwaukee", "garage", "led", "light", "auto", "car", "battery"]):
-        return "Tools & Auto"
-    if any(k in t for k in ["shirt", "shoes", "jacket", "watch", "bag", "backpack", "nike", "adidas", "hoodie", "slipper"]):
-        return "Apparel & Gear"
-    if any(k in t for k in ["snack", "pack", "detergent", "soap", "shampoo", "vitamin", "gummies", "coffee", "tea", "paper"]):
-        return "Everyday Essentials"
+    if any(k in t for k in ["ssd", "laptop", "headphone", "earbud", "usb", "charger", "monitor", "tv", "anker", "apple", "galaxy", "tablet", "speaker", "camera"]): return "Tech & Electronics"
+    if any(k in t for k in ["kitchen", "pan", "air fryer", "coffee", "vacuum", "tumbler", "towel", "bed", "sheet", "pillow", "blender", "organizer"]): return "Home & Kitchen"
+    if any(k in t for k in ["drill", "tool", "dewalt", "milwaukee", "garage", "led", "light", "auto", "car", "battery"]): return "Tools & Auto"
+    if any(k in t for k in ["shirt", "shoes", "jacket", "watch", "bag", "backpack", "nike", "adidas", "hoodie", "slipper"]): return "Apparel & Gear"
+    if any(k in t for k in ["snack", "pack", "detergent", "soap", "shampoo", "vitamin", "gummies", "coffee", "tea", "paper"]): return "Everyday Essentials"
     return "Top Finds"
 
 def score_deal(discount_pct: int, promo_code: str, source_priority: int, is_amazon: bool) -> int:
@@ -190,8 +157,7 @@ def parse_rss_source(source: dict, now_ts: int, existing_deals_map: dict) -> lis
             title = re.sub(r'\s+', ' ', (item.findtext("title") or "")).strip()
             link = (item.findtext("link") or "").strip()
             desc = (item.findtext("description") or "").strip()
-            if not title or not link:
-                continue
+            if not title or not link: continue
 
             combined = f"{title} {desc}"
             is_amazon = ("amazon" in combined.lower()) or ("camelcamelcamel" in source["url"])
@@ -202,25 +168,37 @@ def parse_rss_source(source: dict, now_ts: int, existing_deals_map: dict) -> lis
             if not direct_url and is_amazon:
                 direct_url, extraction_status = resolve_amazon_from_source(link)
             
-            final_url = direct_url if direct_url else link
+            # ==========================================
+            # STRICT QUALITY GATEKEEPER
+            # ==========================================
+            # 1. Must have a resolved Amazon link
+            if not direct_url or "amazon.com" not in direct_url.lower():
+                continue # Discard immediately
+                
+            # 2. Must have a valid image
+            image_url = extract_image(item, desc)
+            if not image_url or image_url.endswith(".gif"):
+                continue # Discard immediately
+                
+            # 3. Must have identifiable prices
+            deal_price, retail_price, raw_price_text = extract_prices(title, desc)
+            if not deal_price or not retail_price or retail_price <= deal_price:
+                continue # Discard immediately
+            # ==========================================
+
+            final_url = direct_url
             deal_id = generate_deal_id(title, link)
-            
             existing_deal = existing_deals_map.get(deal_id)
             created_at = existing_deal["created_at"] if existing_deal else now_ts
 
-            deal_price, retail_price, raw_price_text = extract_prices(title, desc)
             promo_code = extract_promo_code(combined)
-            image_url = extract_image(item, desc)
-
-            discount_pct = 0
-            if deal_price and retail_price and retail_price > deal_price:
-                discount_pct = round(((retail_price - deal_price) / retail_price) * 100)
+            discount_pct = round(((retail_price - deal_price) / retail_price) * 100)
 
             badge = f"{discount_pct}% OFF" if discount_pct >= 15 else ("PROMO CODE" if promo_code else "HOT FIND")
             if promo_code and discount_pct >= 15:
                 badge = f"{discount_pct}% OFF + CODE"
 
-            quality_score = score_deal(discount_pct, promo_code, source["priority"], bool(direct_url and "amazon.com" in direct_url))
+            quality_score = score_deal(discount_pct, promo_code, source["priority"], True)
             is_vip_exclusive = (discount_pct >= 48 or (bool(promo_code) and discount_pct >= 35))
 
             share_landing_url = f"{DEALS_DOMAIN}/?deal={deal_id}"
@@ -245,13 +223,12 @@ def parse_rss_source(source: dict, now_ts: int, existing_deals_map: dict) -> lis
                 "image_url": image_url,
                 "seed_likes": seed_likes,
                 "created_at": created_at,
-                # ADMIN DEBUG FIELDS: Hidden from frontend, vital for your manual review
                 "admin_debug": {
                     "source_url": link,
                     "extraction_status": extraction_status,
                     "raw_price_text": raw_price_text,
-                    "has_direct_amazon_link": bool(direct_url),
-                    "resolved_url": direct_url if direct_url else "None"
+                    "has_direct_amazon_link": True,
+                    "resolved_url": direct_url
                 }
             })
     except Exception as exc:
@@ -281,7 +258,7 @@ def main():
     scraped = []
     for src in RSS_SOURCES:
         items = parse_rss_source(src, now_ts, all_existing_map)
-        print(f"[INFO] {src['name']}: {len(items)} deals parsed")
+        print(f"[INFO] {src['name']}: {len(items)} HIGH-QUALITY deals passed the gatekeeper")
         scraped.extend(items)
 
     vip_map = {d["id"]: d for d in recent_vip}
@@ -319,7 +296,7 @@ def main():
     with open(vip_path, "w", encoding="utf-8") as f:
         json.dump({"updated_at": updated_iso, "total": len(vip_sorted), "deals": vip_sorted}, f, indent=2)
 
-    print(f"[DONE] Saved {len(pub_sorted)} public and {len(vip_sorted)} VIP deals.")
+    print(f"[DONE] Saved {len(pub_sorted)} public and {len(vip_sorted)} VIP deals. All passed strict quality checks.")
 
 if __name__ == "__main__":
     main()
