@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StackDeals Finds — Daily US Amazon Deals &amp; VIP Vault</title>
+  <link rel="stylesheet" href="css/deals.css" />
+</head>
+<body>
+
+  <div class="top-promo-bar">
+    <span>🎁 <strong>$250 Amazon Gift Card Giveaway</strong> (7 Main Winners + 3 VIP Referrer Winners)</span>
+    <a href="https://getstackdeals.xyz" class="promo-cta">Enter Free &amp; Get Referral Link →</a>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="https://getstackdeals.xyz" class="brand">
+        <span class="brand-badge">SD</span>
+        <span class="brand-name">Stack<strong>Deals</strong> <small>Finds</small></span>
+      </a>
+
+      <nav class="nav-tabs" role="tablist">
+        <button id="tab-public" class="nav-tab active" data-view="public">🔥 Public Amazon Finds</button>
+        <button id="tab-vip" class="nav-tab vip-tab" data-view="vip">👑 VIP Referral Vault</button>
+      </nav>
+
+      <div class="header-actions">
+        <button id="fb-mode-btn" class="btn-outline" title="Toggle 1-Click Facebook Post & Comment Link Copier">
+          📣 FB Share Mode: <strong id="fb-mode-state">OFF</strong>
+        </button>
+        <a id="auth-pill" href="https://getstackdeals.xyz" class="auth-pill">Checking Session...</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="spotlight-banner" class="spotlight-wrap hidden">
+    <div class="container">
+      <div class="spotlight-card" id="spotlight-content"></div>
+    </div>
+  </section>
+
+  <main class="container main-wrap">
+    <section id="view-public">
+      <div class="toolbar">
+        <div class="category-pills" id="category-pills">
+          <button class="pill active" data-cat="ALL">All Deals</button>
+          <button class="pill" data-cat="Tech & Electronics">Tech</button>
+          <button class="pill" data-cat="Home & Kitchen">Home &amp; Kitchen</button>
+          <button class="pill" data-cat="Tools & Auto">Tools &amp; Auto</button>
+          <button class="pill" data-cat="Apparel & Gear">Apparel</button>
+          <button class="pill" data-cat="Everyday Essentials">Essentials</button>
+        </div>
+        <div class="toolbar-right">
+          <input type="search" id="search-input" placeholder="Search brands, codes, items..." class="search-box" />
+          <select id="sort-select" class="sort-select">
+            <option value="featured">Sort: Featured</option>
+            <option value="discount">Highest % Off</option>
+            <option value="likes">Most Liked</option>
+            <option value="price_asc">Lowest Price</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="feed-meta">
+        <span id="deal-count">Loading curated Amazon deals...</span>
+        <span id="last-updated"></span>
+      </div>
+
+      <div id="public-grid" class="deals-grid"></div>
+    </section>
+
+    <section id="view-vip" class="hidden">
+      <div id="vip-locked-card" class="vip-gate-card hidden">
+        <div class="vip-crown">👑</div>
+        <h2>Unlock the VIP Referral Vault + 3 × $25 Amazon GC Referrer Draw</h2>
+        <p class="vip-sub">
+          VIP members unlock our private feed of <strong>50%+ off Amazon glitches &amp; verified promo codes</strong> (not posted publicly) plus automatic entry into the <strong>3 × $25 Amazon Gift Card Referrer Draw</strong> and <strong>+100 bonus points per referral</strong>.
+        </p>
+
+        <div class="checklist-box" id="vip-checklist">
+          <div class="check-item" id="chk-auth">⏳ Sign in &amp; verify email on StackDeals</div>
+          <div class="check-item" id="chk-self-task">⏳ Complete at least 1 quick offerwall task yourself</div>
+          <div class="check-item" id="chk-refs">⏳ Refer 5 friends who each verify &amp; complete 1 task (<strong id="ref-counter">0/5</strong>)</div>
+        </div>
+
+        <div class="vip-cta-row">
+          <a href="https://getstackdeals.xyz" class="btn-primary">Open Giveaway Widget &amp; Copy Referral Link →</a>
+        </div>
+      </div>
+
+      <div id="vip-unlocked-wrap" class="hidden">
+        <div class="vip-banner-unlocked">
+          <div>
+            <strong>👑 VIP Status Active</strong> — You are entered in the <strong>3 × $25 Amazon GC Referrer Draw</strong> &amp; have full access to private high-discount finds.
+          </div>
+          <span id="vip-points-badge" class="badge-gold"></span>
+        </div>
+        <div id="vip-grid" class="deals-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 StackDeals. Prices &amp; promo codes change rapidly on Amazon. As an affiliate partner, StackDeals may earn from qualifying purchases at no extra cost to you.</p>
+      <div class="footer-links">
+        <a href="https://getstackdeals.xyz">Giveaways</a>
+        <a href="https://offers.getstackdeals.xyz">Offerwall</a>
+        <a href="https://getstackdeals.xyz/contest-rules.html">Rules</a>
+        <a href="https://getstackdeals.xyz/privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="js/deals.js"></script>
+</body>
+</html>
