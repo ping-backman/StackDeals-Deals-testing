@@ -1,8 +1,61 @@
 {
-  "updated_at": "2026-11-26T20:51:49Z",
+  "updated_at": "2026-11-26T23:07:35Z",
   "total": 18,
-  "instructions": "VIP-exclusive high-discount & promo-code deals unlocked at 5 qualified referrals + 1 completed task.",
   "deals": [
+    {
+      "id": "sd-46358e3a",
+      "manual_override": false,
+      "is_vip": true,
+      "source": "Hip2Save Deals",
+      "category": "Top Finds",
+      "badge": "50% OFF + CODE",
+      "discount_pct": 50,
+      "quality_score": 115,
+      "title": "Eyebrow Razor 9-Piece Set Only $2.99 on Amazon",
+      "retail_price": 5.99,
+      "deal_price": 2.99,
+      "promo_code": "YANHT530",
+      "affiliate_url": "https://www.amazon.com/dp/B0GCD81NMV",
+      "raw_url": "https://www.amazon.com/dp/B0GCD81NMV?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=37449c167cee2b39f5519bf4be792a65&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
+      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-46358e3a",
+      "image_url": "",
+      "seed_likes": 101,
+      "created_at": 1795734376,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/amazon-eyebrow-razor-kit/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Now:2.99 Heuristic:[2.99, 5.99]",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B0GCD81NMV?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=37449c167cee2b39f5519bf4be792a65&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
+    },
+    {
+      "id": "sd-b7149d57",
+      "manual_override": false,
+      "is_vip": true,
+      "source": "Hip2Save Deals",
+      "category": "Home & Kitchen",
+      "badge": "56% OFF + CODE",
+      "discount_pct": 56,
+      "quality_score": 115,
+      "title": "HEPA Air Purifier Only $35.99 Shipped on Amazon | Perfect for Bedrooms & Home Offices!",
+      "retail_price": 80.99,
+      "deal_price": 35.99,
+      "promo_code": "7WP6MD4E",
+      "affiliate_url": "https://www.amazon.com/dp/B08PJQ3MWB",
+      "raw_url": "https://www.amazon.com/dp/B08PJQ3MWB?m=A1BM5TZ9XRQKU3&amp;th=1&amp;linkCode=ll2&amp;tag=hip2saveexclusive-20&amp;linkId=b656d6eca331243955d3038cec489cd4&amp;language=en_US&amp;ref_=as_li_ss_tl",
+      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-b7149d57",
+      "image_url": "",
+      "seed_likes": 102,
+      "created_at": 1795734376,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/mooka-air-purifier/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Now:35.99 Heuristic:[35.99, 80.99]",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B08PJQ3MWB?m=A1BM5TZ9XRQKU3&amp;th=1&amp;linkCode=ll2&amp;tag=hip2saveexclusive-20&amp;linkId=b656d6eca331243955d3038cec489cd4&amp;language=en_US&amp;ref_=as_li_ss_tl"
+      }
+    },
     {
       "id": "sd-d550bbcc",
       "manual_override": false,
@@ -70,72 +123,6 @@
       "created_at": 1795726252
     },
     {
-      "id": "sd-6aa23319",
-      "manual_override": false,
-      "is_vip": true,
-      "source": "DealNews Editors Choice",
-      "category": "Tech & Electronics",
-      "badge": "77% OFF + CODE",
-      "discount_pct": 77,
-      "quality_score": 115,
-      "title": "Soliom Solar Powered Smart Bird Feeder with 2K Camera for $24.50 + free shipping w/ Prime",
-      "retail_price": 105.49,
-      "deal_price": 24.5,
-      "promo_code": "N6CL1GGB",
-      "affiliate_url": "https://www.dealnews.com/Soliom-Solar-Powered-Smart-Bird-Feeder-with-2-K-Camera-for-24-50-free-shipping-w-Prime/22415436.html?iref=rss-f1912",
-      "raw_url": "https://www.dealnews.com/Soliom-Solar-Powered-Smart-Bird-Feeder-with-2-K-Camera-for-24-50-free-shipping-w-Prime/22415436.html?iref=rss-f1912",
-      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-6aa23319",
-      "fb_caption": "\ud83d\udd25 77% OFF + CODE: Soliom Solar Powered Smart Bird Feeder with 2K Camera for $24.50 + free shipping w/ Prime\n\ud83d\udcb0 Now $24.50 (Reg. $105.49)\n\ud83c\udf9f\ufe0f Promo Code: N6CL1GGB\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-6aa23319",
-      "image_url": "https://d.dlnws.com/64599/1795193841-71sjepvrnkl-ac_sl1500.avif?h=250&w=210",
-      "seed_likes": 96,
-      "created_at": 1795726252
-    },
-    {
-      "id": "sd-d95a5ff8",
-      "manual_override": false,
-      "is_vip": true,
-      "source": "DealNews Editors Choice",
-      "category": "Home & Kitchen",
-      "badge": "57% OFF + CODE",
-      "discount_pct": 57,
-      "quality_score": 115,
-      "title": "Lefant M210 OMNI Robot Vacuum and Mop for $150 + free shipping",
-      "retail_price": 350.0,
-      "deal_price": 150.0,
-      "promo_code": "EPB926J3",
-      "affiliate_url": "https://www.dealnews.com/products/Lefant/Lefant-M210-Omni-Robot-Vacuum-and-Mop/541142.html?iref=rss-f1912",
-      "raw_url": "https://www.dealnews.com/products/Lefant/Lefant-M210-Omni-Robot-Vacuum-and-Mop/541142.html?iref=rss-f1912",
-      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-d95a5ff8",
-      "fb_caption": "\ud83d\udd25 57% OFF + CODE: Lefant M210 OMNI Robot Vacuum and Mop for $150 + free shipping\n\ud83d\udcb0 Now $150.00 (Reg. $350.00)\n\ud83c\udf9f\ufe0f Promo Code: EPB926J3\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-d95a5ff8",
-      "image_url": "https://d.dlnws.com/64599/1795110185-draftworks_img_nbs3udriid8d7jmhoga.jpeg?h=250&w=250",
-      "seed_likes": 97,
-      "created_at": 1795726252
-    },
-    {
-      "id": "sd-8f1a4c23",
-      "manual_override": false,
-      "is_vip": true,
-      "source": "DealNews Editors Choice",
-      "category": "Top Finds",
-      "badge": "52% OFF + CODE",
-      "discount_pct": 52,
-      "quality_score": 115,
-      "title": "Leonc 65\" RGB+CCT Smart Floor Lamp for $40 + free shipping",
-      "retail_price": 82.74,
-      "deal_price": 40.0,
-      "promo_code": "399K9DZV",
-      "affiliate_url": "https://www.dealnews.com/Leonc-65-RGB-CCT-Smart-Floor-Lamp-for-40-free-shipping/22431287.html?iref=rss-f1912",
-      "raw_url": "https://www.dealnews.com/Leonc-65-RGB-CCT-Smart-Floor-Lamp-for-40-free-shipping/22431287.html?iref=rss-f1912",
-      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-8f1a4c23",
-      "fb_caption": "\ud83d\udd25 52% OFF + CODE: Leonc 65\" RGB+CCT Smart Floor Lamp for $40 + free shipping\n\ud83d\udcb0 Now $40.00 (Reg. $82.74)\n\ud83c\udf9f\ufe0f Promo Code: 399K9DZV\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-8f1a4c23",
-      "image_url": "https://d.dlnws.com/64599/1795625840-draftworks_img_g8ciudhdoem04nojkok.jpeg?h=250&w=250",
-      "seed_likes": 97,
-      "created_at": 1795726252
-    },
-    {
       "id": "sd-e09e167d",
       "manual_override": false,
       "is_vip": true,
@@ -151,11 +138,16 @@
       "affiliate_url": "https://www.amazon.com/dp/B0GHMC62CC",
       "raw_url": "https://www.amazon.com/dp/B0GHMC62CC?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=333c0fd00d06c6950c1cc97139cffd34&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
       "share_url": "https://deals.getstackdeals.xyz/?deal=sd-e09e167d",
-      "fb_caption": "\ud83d\udd25 72% OFF + CODE: Inflatable Paddle Boards w/ Accessories from $70.99 Shipped on Amazon (Reg. $250)\n\ud83d\udcb0 Now $70.99 (Reg. $250.00)\n\ud83c\udf9f\ufe0f Promo Code: SASLAXTW\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-e09e167d",
       "image_url": "",
       "seed_likes": 57,
-      "created_at": 1795726252
+      "created_at": 1795726252,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/inflatable-paddle-board/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Heuristic:[70.99, 126.34, 249.95, 250.0]",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B0GHMC62CC?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=333c0fd00d06c6950c1cc97139cffd34&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
     },
     {
       "id": "sd-fcedf16e",
@@ -173,11 +165,16 @@
       "affiliate_url": "https://www.amazon.com/dp/B0BTY2WQWN",
       "raw_url": "https://www.amazon.com/dp/B0BTY2WQWN?&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=6fde6e272584ae7cd1182ea53ede6f9b&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
       "share_url": "https://deals.getstackdeals.xyz/?deal=sd-fcedf16e",
-      "fb_caption": "\ud83d\udd25 53% OFF + CODE: Engraved Sterling Silver Hug Ring Just $13.99 on Amazon (Reg. $30) | Thoughtful Gift Idea\n\ud83d\udcb0 Now $13.99 (Reg. $29.99)\n\ud83c\udf9f\ufe0f Promo Code: PZ6M5AAV\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-fcedf16e",
       "image_url": "",
       "seed_likes": 58,
-      "created_at": 1795726252
+      "created_at": 1795726252,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/amazon-hug-ring/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Was:29.99Heuristic:[13.99, 23.99, 29.99, 30.0]",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B0BTY2WQWN?&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=6fde6e272584ae7cd1182ea53ede6f9b&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
     },
     {
       "id": "sd-3cfab7f2",
@@ -195,11 +192,16 @@
       "affiliate_url": "https://www.amazon.com/dp/B0D531KWFV",
       "raw_url": "https://www.amazon.com/gp/product/B0D531KWFV?smid=A11MRNG12XTKVV&amp;th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=31f61123d0e847f66f16d9699ebf3643&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
       "share_url": "https://deals.getstackdeals.xyz/?deal=sd-3cfab7f2",
-      "fb_caption": "\ud83d\udd25 62% OFF + CODE: Fidget Pen Only $6 Shipped for Amazon Prime Members\n\ud83d\udcb0 Now $6.00 (Reg. $15.97)\n\ud83c\udf9f\ufe0f Promo Code: EC2T19K4\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-3cfab7f2",
       "image_url": "",
       "seed_likes": 59,
-      "created_at": 1795726252
+      "created_at": 1795726252,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/amazon-fidget-pen/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Now:6.0 Was:15.97",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/gp/product/B0D531KWFV?smid=A11MRNG12XTKVV&amp;th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=31f61123d0e847f66f16d9699ebf3643&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
     },
     {
       "id": "sd-0cd82d19",
@@ -217,11 +219,16 @@
       "affiliate_url": "https://www.amazon.com/dp/B0H9Y11MM4",
       "raw_url": "https://www.amazon.com/dp/B0H9Y11MM4?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=d0dca64dacfd6bb36080ea0298eb76e9&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
       "share_url": "https://deals.getstackdeals.xyz/?deal=sd-0cd82d19",
-      "fb_caption": "\ud83d\udd25 57% OFF + CODE: Woven Style Christmas Figurine Sets from $14.99 on Amazon\n\ud83d\udcb0 Now $14.99 (Reg. $34.99)\n\ud83c\udf9f\ufe0f Promo Code: XMFQT62C\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-0cd82d19",
       "image_url": "",
       "seed_likes": 60,
-      "created_at": 1795726252
+      "created_at": 1795726252,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/gleemoria-christmas-figurines-sets/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Heuristic:[14.99, 29.99, 34.99]",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B0H9Y11MM4?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=d0dca64dacfd6bb36080ea0298eb76e9&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
     },
     {
       "id": "sd-39c27508",
@@ -239,11 +246,16 @@
       "affiliate_url": "https://www.amazon.com/dp/B0HFLYF2H3",
       "raw_url": "https://www.amazon.com/dp/B0HFLYF2H3?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=15f37b28f19c2c86af1a98417727a9ad&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
       "share_url": "https://deals.getstackdeals.xyz/?deal=sd-39c27508",
-      "fb_caption": "\ud83d\udd25 50% OFF + CODE: Mini White Noise Machine Only $4.99 on Amazon (Reg. $10)\n\ud83d\udcb0 Now $4.99 (Reg. $9.99)\n\ud83c\udf9f\ufe0f Promo Code: TMLSI963\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-39c27508",
       "image_url": "",
       "seed_likes": 60,
-      "created_at": 1795726252
+      "created_at": 1795726252,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/glocusent-white-noise-machine/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Now:4.99 Was:9.99",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B0HFLYF2H3?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=15f37b28f19c2c86af1a98417727a9ad&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
     },
     {
       "id": "sd-9a9c3718",
@@ -251,21 +263,26 @@
       "is_vip": true,
       "source": "Hip2Save Deals",
       "category": "Tech & Electronics",
-      "badge": "87% OFF + CODE",
-      "discount_pct": 87,
+      "badge": "62% OFF + CODE",
+      "discount_pct": 62,
       "quality_score": 115,
       "title": "USB-C Charging Cables 3-Pack Only $3.43 on Amazon",
       "retail_price": 8.99,
-      "deal_price": 1.14,
+      "deal_price": 3.43,
       "promo_code": "LWO7BBOP",
       "affiliate_url": "https://www.amazon.com/dp/B0FBWB948Y",
       "raw_url": "https://www.amazon.com/gp/product/B0FBWB948Y?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=eab5f8006daef9a59aa32b93c5191674&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
       "share_url": "https://deals.getstackdeals.xyz/?deal=sd-9a9c3718",
-      "fb_caption": "\ud83d\udd25 87% OFF + CODE: USB-C Charging Cables 3-Pack Only $3.43 on Amazon\n\ud83d\udcb0 Now $1.14 (Reg. $8.99)\n\ud83c\udf9f\ufe0f Promo Code: LWO7BBOP\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-9a9c3718",
       "image_url": "",
       "seed_likes": 60,
-      "created_at": 1795726252
+      "created_at": 1795726252,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/usb-c-charging-cables/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Now:3.43 Heuristic:[1.14, 3.43, 7.19, 8.99]",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/gp/product/B0FBWB948Y?th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=eab5f8006daef9a59aa32b93c5191674&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
     },
     {
       "id": "sd-70748ef9",
@@ -283,33 +300,16 @@
       "affiliate_url": "https://www.amazon.com/dp/B0HNMZL4MH",
       "raw_url": "https://www.amazon.com/gp/product/B0HNMZL4MH?smid=A1UPG1W168LNV0&amp;th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=30a32cf0d93f4e5673763079554d6838&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl",
       "share_url": "https://deals.getstackdeals.xyz/?deal=sd-70748ef9",
-      "fb_caption": "\ud83d\udd25 67% OFF + CODE: Smart Bird Feeder w/ Camera Only $29.99 Shipped for Prime Members (Reg. $90)\n\ud83d\udcb0 Now $29.99 (Reg. $89.99)\n\ud83c\udf9f\ufe0f Promo Code: YPB8FJXH\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-70748ef9",
       "image_url": "",
       "seed_likes": 60,
-      "created_at": 1795726252
-    },
-    {
-      "id": "sd-6bb68181",
-      "manual_override": false,
-      "is_vip": true,
-      "source": "Hip2Save Deals",
-      "category": "Top Finds",
-      "badge": "60% OFF + CODE",
-      "discount_pct": 60,
-      "quality_score": 115,
-      "title": "Dual-Sided Stainless Steel Cutting Board Only $11.87 on Amazon",
-      "retail_price": 29.99,
-      "deal_price": 11.87,
-      "promo_code": "M7ZTSPIO",
-      "affiliate_url": "https://hip2save.com/deals/stainless-steel-cutting-board/",
-      "raw_url": "https://hip2save.com/deals/stainless-steel-cutting-board/",
-      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-6bb68181",
-      "fb_caption": "\ud83d\udd25 60% OFF + CODE: Dual-Sided Stainless Steel Cutting Board Only $11.87 on Amazon\n\ud83d\udcb0 Now $11.87 (Reg. $29.99)\n\ud83c\udf9f\ufe0f Promo Code: M7ZTSPIO\n\ud83d\udc47 Grab the direct link in the first comment!",
-      "fb_comment_link": "\ud83d\udc49 Get this deal here: https://deals.getstackdeals.xyz/?deal=sd-6bb68181",
-      "image_url": "",
-      "seed_likes": 60,
-      "created_at": 1795726252
+      "created_at": 1795726252,
+      "admin_debug": {
+        "source_url": "https://hip2save.com/deals/smart-bird-feeder/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Now:29.99 Was:89.99",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/gp/product/B0HNMZL4MH?smid=A1UPG1W168LNV0&amp;th=1&amp;linkCode=ll2&amp;tag=wwwhip2saveco-20&amp;linkId=30a32cf0d93f4e5673763079554d6838&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl"
+      }
     },
     {
       "id": "sd-ea85dc85",
@@ -398,6 +398,60 @@
       "image_url": "https://d.dlnws.com/64599/1782312238-draftworks_img_3oijn1schhviainhdjo.jpeg?h=250&w=250",
       "seed_likes": 57,
       "created_at": 1795701935
+    },
+    {
+      "id": "sd-94cedc39",
+      "manual_override": false,
+      "is_vip": true,
+      "source": "9to5Toys Tech Deals",
+      "category": "Tech & Electronics",
+      "badge": "51% OFF + CODE",
+      "discount_pct": 51,
+      "quality_score": 110,
+      "title": "Thanksgiving deals hub: Apple, Google, LEGO, Anker, apparel, TVs, more",
+      "retail_price": 449.99,
+      "deal_price": 220.0,
+      "promo_code": "SHAVES",
+      "affiliate_url": "https://www.amazon.com/dp/B0FWCXJVHN",
+      "raw_url": "https://www.amazon.com/dp/B0FWCXJVHN?tag=toysj-20&amp;th=1",
+      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-94cedc39",
+      "image_url": "https://9to5toys.com/wp-content/uploads/sites/5/2026/11/9to5toys_black_friday_02-02.png?w=1600",
+      "seed_likes": 58,
+      "created_at": 1795734376,
+      "admin_debug": {
+        "source_url": "https://9to5toys.com/2026/11/26/thanksgiving-deals-hub-best-now-live/",
+        "extraction_status": "success_direct_found",
+        "raw_price_text": "Now:220.0 Was:449.99",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B0FWCXJVHN?tag=toysj-20&amp;th=1"
+      }
+    },
+    {
+      "id": "sd-959e7876",
+      "manual_override": false,
+      "is_vip": true,
+      "source": "DealNews Most Popular",
+      "category": "Top Finds",
+      "badge": "84% OFF + CODE",
+      "discount_pct": 84,
+      "quality_score": 100,
+      "title": "Fanatics Black Friday Sale: Up to an extra 60% off",
+      "retail_price": 150.0,
+      "deal_price": 23.99,
+      "promo_code": "BF60",
+      "affiliate_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
+      "raw_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
+      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-959e7876",
+      "image_url": "https://d.dlnws.com/64599/1795685751-product-trimmed.jpg?h=54&w=250",
+      "seed_likes": 74,
+      "created_at": 1795734376,
+      "admin_debug": {
+        "source_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
+        "extraction_status": "success_direct_in_rss",
+        "raw_price_text": "Heuristic:[23.99, 25.0, 50.0, 59.99, 62.99, 100.0, 150.0]",
+        "has_direct_amazon_link": false,
+        "resolved_url": "None"
+      }
     }
   ]
 }
