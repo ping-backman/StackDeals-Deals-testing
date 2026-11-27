@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T03:31:41Z",
+  "updated_at": "2026-11-27T16:19:25Z",
   "total": 55,
   "instructions": "Edit any deal manually in GitHub. Set 'manual_override': true so the 6-hour bot preserves your edits.",
   "deals": [
