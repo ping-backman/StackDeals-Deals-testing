@@ -1,6 +1,7 @@
 {
-  "updated_at": "2026-11-27T02:08:48Z",
+  "updated_at": "2026-11-27T03:31:41Z",
   "total": 18,
+  "instructions": "VIP-exclusive high-discount & promo-code deals unlocked at 5 qualified referrals + 1 completed task.",
   "deals": [
     {
       "id": "sd-46358e3a",
@@ -54,60 +55,6 @@
         "raw_price_text": "Now:35.99 Heuristic:[35.99, 80.99]",
         "has_direct_amazon_link": true,
         "resolved_url": "https://www.amazon.com/dp/B08PJQ3MWB?m=A1BM5TZ9XRQKU3&amp;th=1&amp;linkCode=ll2&amp;tag=hip2saveexclusive-20&amp;linkId=b656d6eca331243955d3038cec489cd4&amp;language=en_US&amp;ref_=as_li_ss_tl"
-      }
-    },
-    {
-      "id": "sd-94cedc39",
-      "manual_override": false,
-      "is_vip": true,
-      "source": "9to5Toys Tech Deals",
-      "category": "Tech & Electronics",
-      "badge": "51% OFF + CODE",
-      "discount_pct": 51,
-      "quality_score": 110,
-      "title": "Thanksgiving deals hub: Apple, Google, LEGO, Anker, apparel, TVs, more",
-      "retail_price": 449.99,
-      "deal_price": 220.0,
-      "promo_code": "SHAVES",
-      "affiliate_url": "https://www.amazon.com/dp/B0FWCXJVHN",
-      "raw_url": "https://www.amazon.com/dp/B0FWCXJVHN?tag=toysj-20&amp;th=1",
-      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-94cedc39",
-      "image_url": "https://9to5toys.com/wp-content/uploads/sites/5/2026/11/9to5toys_black_friday_02-02.png?w=1600",
-      "seed_likes": 58,
-      "created_at": 1795734376,
-      "admin_debug": {
-        "source_url": "https://9to5toys.com/2026/11/26/thanksgiving-deals-hub-best-now-live/",
-        "extraction_status": "success_redirect_followed",
-        "raw_price_text": "Now:220.0 Was:449.99",
-        "has_direct_amazon_link": true,
-        "resolved_url": "https://www.amazon.com/dp/B0FWCXJVHN?tag=toysj-20&amp;th=1"
-      }
-    },
-    {
-      "id": "sd-959e7876",
-      "manual_override": false,
-      "is_vip": true,
-      "source": "DealNews Most Popular",
-      "category": "Top Finds",
-      "badge": "84% OFF + CODE",
-      "discount_pct": 84,
-      "quality_score": 100,
-      "title": "Fanatics Black Friday Sale: Up to an extra 60% off",
-      "retail_price": 150.0,
-      "deal_price": 23.99,
-      "promo_code": "BF60",
-      "affiliate_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
-      "raw_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
-      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-959e7876",
-      "image_url": "https://d.dlnws.com/64599/1795685751-product-trimmed.jpg?h=54&w=250",
-      "seed_likes": 74,
-      "created_at": 1795734376,
-      "admin_debug": {
-        "source_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
-        "extraction_status": "success_direct_in_rss",
-        "raw_price_text": "Heuristic:[23.99, 25.0, 50.0, 59.99, 62.99, 100.0, 150.0]",
-        "has_direct_amazon_link": false,
-        "resolved_url": "None"
       }
     },
     {
@@ -452,6 +399,60 @@
       "image_url": "https://d.dlnws.com/64599/1782312238-draftworks_img_3oijn1schhviainhdjo.jpeg?h=250&w=250",
       "seed_likes": 57,
       "created_at": 1795701935
+    },
+    {
+      "id": "sd-94cedc39",
+      "manual_override": false,
+      "is_vip": true,
+      "source": "9to5Toys Tech Deals",
+      "category": "Tech & Electronics",
+      "badge": "51% OFF + CODE",
+      "discount_pct": 51,
+      "quality_score": 110,
+      "title": "Thanksgiving deals hub: Apple, Google, LEGO, Anker, apparel, TVs, more",
+      "retail_price": 449.99,
+      "deal_price": 220.0,
+      "promo_code": "SHAVES",
+      "affiliate_url": "https://www.amazon.com/dp/B0FWCXJVHN",
+      "raw_url": "https://www.amazon.com/dp/B0FWCXJVHN?tag=toysj-20&amp;th=1",
+      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-94cedc39",
+      "image_url": "https://9to5toys.com/wp-content/uploads/sites/5/2026/11/9to5toys_black_friday_02-02.png?w=1600",
+      "seed_likes": 58,
+      "created_at": 1795734376,
+      "admin_debug": {
+        "source_url": "https://9to5toys.com/2026/11/26/thanksgiving-deals-hub-best-now-live/",
+        "extraction_status": "success_redirect_followed",
+        "raw_price_text": "Now:220.0 Was:449.99",
+        "has_direct_amazon_link": true,
+        "resolved_url": "https://www.amazon.com/dp/B0FWCXJVHN?tag=toysj-20&amp;th=1"
+      }
+    },
+    {
+      "id": "sd-959e7876",
+      "manual_override": false,
+      "is_vip": true,
+      "source": "DealNews Most Popular",
+      "category": "Top Finds",
+      "badge": "84% OFF + CODE",
+      "discount_pct": 84,
+      "quality_score": 100,
+      "title": "Fanatics Black Friday Sale: Up to an extra 60% off",
+      "retail_price": 150.0,
+      "deal_price": 23.99,
+      "promo_code": "BF60",
+      "affiliate_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
+      "raw_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
+      "share_url": "https://deals.getstackdeals.xyz/?deal=sd-959e7876",
+      "image_url": "https://d.dlnws.com/64599/1795685751-product-trimmed.jpg?h=54&w=250",
+      "seed_likes": 74,
+      "created_at": 1795734376,
+      "admin_debug": {
+        "source_url": "https://www.dealnews.com/Fanatics-Black-Friday-Sale-Up-to-an-extra-60-off/22433627.html?iref=rss",
+        "extraction_status": "success_direct_in_rss",
+        "raw_price_text": "Heuristic:[23.99, 25.0, 50.0, 59.99, 62.99, 100.0, 150.0]",
+        "has_direct_amazon_link": false,
+        "resolved_url": "None"
+      }
     }
   ]
 }
